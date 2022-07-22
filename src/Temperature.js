@@ -18,7 +18,7 @@ export default function Temperature() {
           |<a href="/">°F</a>
         </span>
         <div className="col">
-          <ul className="today-orther-info">
+          <ul className="today-other-info">
             <li>Humidity: 78%</li>
             <li>Wind: 11km/h</li>
           </ul>
