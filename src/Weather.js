@@ -13,9 +13,9 @@ export default function Weather() {
           <Temperature />
         </div>
       </div>
-      <p className="open-source">
+      <p className="open-source">This project was coded by Marisol HO and is {""}
         <a href="https://github.com/MarisolHO/weather-app-react" target="_blank">Open-source code</a>{" "}
-        by Marisol HO
+
       </p>
     </div>
   );

@@ -1,7 +1,5 @@
 export default function Temperature() {
-  let temperatureData = {
-    celsius: "20"
-  };
+
   return (
     <div className="temperature">
       <img
@@ -10,7 +8,7 @@ export default function Temperature() {
         alt="clear"
       />
       <p>
-        <span>{temperatureData.celsius}</span>
+        <span className="temperature">20</span>
         <span className="units">
           <a href="/" className="active">
             °C
