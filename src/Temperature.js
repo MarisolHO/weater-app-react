@@ -1,14 +1,15 @@
-export default function Temperature() {
+import React from "react";
 
+export default function Temperature(props) {
   return (
     <div className="temperature">
       <img
-        src="http://openweathermap.org/img/wn/10d@2x.png"
+        src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`}
         className="sun"
-        alt="clear"
+        alt={props.description}
       />
       <p>
-        <span className="temperature">20</span>
+        <span className="temperature">{props.temperature}</span>
         <span className="units">
           <a href="/" className="active">
             °C
@@ -17,8 +18,8 @@ export default function Temperature() {
         </span>
         <div className="col">
           <ul className="today-other-info">
-            <li>Humidity: 78%</li>
-            <li>Wind: 11km/h</li>
+            <li>Humidity: {props.humidity}%</li>
+            <li>Wind: {props.wind}km/h</li>
           </ul>
         </div>
       </p>

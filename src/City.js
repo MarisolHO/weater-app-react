@@ -1,12 +1,12 @@
-export default function City() {
+export default function City(props) {
 
   return (
     <div className="city">
-      <h1>New York</h1>
+      <h1>{props.city}</h1>
       <p>
         <span>Monday 11:00 </span>
         <br />
-        <span className="sky">Cloudy</span>
+        <span className="sky">{props.description}</span>
       </p>
     </div>
   );
