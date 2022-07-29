@@ -1,10 +1,13 @@
-export default function City(props) {
+import FormattedDate from "./FormattedDate";
 
+export default function City(props) {
   return (
     <div className="city">
       <h1>{props.city}</h1>
       <p>
-        <span>Monday 11:00 </span>
+        <span>
+          <FormattedDate date={props.date} />
+        </span>
         <br />
         <span className="sky">{props.description}</span>
       </p>

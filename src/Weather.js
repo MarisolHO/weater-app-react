@@ -15,6 +15,7 @@ export default function Weather() {
             <City
               description={currentWeather.description}
               city={currentWeather.city}
+              date={currentWeather.date}
             />
             <Temperature
               temperature={currentWeather.temperature}

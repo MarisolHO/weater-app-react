@@ -3,7 +3,6 @@ import { useState } from "react";
 
 const apiKey = "e3f308dbc1f40462b7213a15fa40687f";
 
-
 export default function Search({ setCurrentWeather }) {
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
@@ -14,7 +13,10 @@ export default function Search({ setCurrentWeather }) {
     if (loading === false) {
       setLoading(true);
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-      axios.get(apiUrl).then(handleResponse).catch(() => setLoading(false));
+      axios
+        .get(apiUrl)
+        .then(handleResponse)
+        .catch(() => setLoading(false));
     }
   }
 
@@ -26,7 +28,8 @@ export default function Search({ setCurrentWeather }) {
       city: city,
       wind: Math.round(response.data.wind.speed),
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon
+      icon: response.data.weather[0].icon,
+      date: new Date(response.data.dt * 1000),
     };
     setCurrentWeather(weartherData);
     setLoading(false);
