@@ -1,13 +1,11 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Temperature(props) {
   return (
     <div className="temperature">
-      <img
-        src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`}
-        className="sun"
-        alt={props.description}
-      />
+      <WeatherIcon code={props.icon} />
+
       <p>
         <span className="temperature">{props.temperature}</span>
         <span className="units">
