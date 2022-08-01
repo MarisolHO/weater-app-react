@@ -32,7 +32,7 @@ export default function Weather() {
           href="https://github.com/MarisolHO/weather-app-react"
           target="_blank"
         >
-          Open-source code
+          Open-source on GitHub
         </a>{" "}
       </p>
     </div>
