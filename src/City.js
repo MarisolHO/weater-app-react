@@ -8,7 +8,7 @@ export default function City(props) {
         <span>
           <FormattedDate date={props.date} />
         </span>
-        <br />
+
         <span className="sky">{props.description}</span>
       </p>
     </div>

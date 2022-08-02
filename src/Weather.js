@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import City from "./City";
 import Search from "./Search";
 import Temperature from "./Temperature";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -25,6 +26,7 @@ export default function Weather() {
             />
           </div>
         )}
+        <WeatherForecast />
       </div>
       <p className="open-source">
         This project was coded by Marisol HO and is {""}

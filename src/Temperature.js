@@ -5,18 +5,14 @@ import WeatherTemperature from "./WeatherTemperature";
 export default function Temperature(props) {
   return (
     <div className="temperature">
-      <WeatherIcon code={props.icon} />
+      <WeatherIcon code={props.icon} size={52} />
 
-      <p>
-        <WeatherTemperature celsius={props.temperature} />
+      <WeatherTemperature celsius={props.temperature} />
 
-        <div className="col">
-          <ul className="today-other-info">
-            <li>Humidity: {props.humidity}%</li>
-            <li>Wind: {props.wind}km/h</li>
-          </ul>
-        </div>
-      </p>
+      <ul className="today-other-info">
+        <li>Humidity: {props.humidity}%</li>
+        <li>Wind: {props.wind}km/h</li>
+      </ul>
     </div>
   );
 }

@@ -63,67 +63,21 @@
   justify-content: center;
 }
 
-canvas {
-  display: block;
-  width: 80px;
-  margin: -20px 30px;
-  margin-bottom: 8px;
-}
-
-.temperature p {
-  font-size: 1rem;
+.temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: 6px;
-}
-
-.temperature-min {
-  opacity: 0.8;
-}
-
-.forecast {
-  margin-bottom: 20px;
-}
-
-.forecast h4 {
-  margin-bottom: 12px;
-  font-weight: normal;
-}
-
-.card-forecast {
-  text-align: center;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
-  margin-right: 8px;
-  padding: 16px 0;
-  background-color: #f7f7f8;
-}
-
-.card-forecast:last-child {
-  margin-right: 0;
-}
-
-.card-forecast h6 {
-  font-size: 20px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.card-forecast p {
-  margin-bottom: 0;
-  font-size: 12px;
-}
-
-.card-forecast img {
-  width: 50px;
-  margin: 10px;
 }
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .sky {
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .open-source {
