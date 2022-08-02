@@ -12,21 +12,23 @@ export default function Weather() {
       <div className="weather-wrapper border">
         <Search setCurrentWeather={setCurrentWeather} />
         {currentWeather && (
-          <div className="weather-today d-flex justify-content-between">
-            <City
-              description={currentWeather.description}
-              city={currentWeather.city}
-              date={currentWeather.date}
-            />
-            <Temperature
-              temperature={currentWeather.temperature}
-              humidity={currentWeather.humidity}
-              wind={currentWeather.wind}
-              icon={currentWeather.icon}
-            />
-          </div>
+          <>
+            <div className="weather-today d-flex justify-content-between">
+              <City
+                description={currentWeather.description}
+                city={currentWeather.city}
+                date={currentWeather.date}
+              />
+              <Temperature
+                temperature={currentWeather.temperature}
+                humidity={currentWeather.humidity}
+                wind={currentWeather.wind}
+                icon={currentWeather.icon}
+              />
+            </div>
+            <WeatherForecast coordinates={currentWeather.coordinates} />
+          </>
         )}
-        <WeatherForecast />
       </div>
       <p className="open-source">
         This project was coded by Marisol HO and is {""}

@@ -4,7 +4,7 @@ import { useState } from "react";
 const apiKey = "e3f308dbc1f40462b7213a15fa40687f";
 
 export default function Search({ setCurrentWeather }) {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("paris");
   const [loading, setLoading] = useState(false);
 
   function handleSubmit(event) {
@@ -23,6 +23,7 @@ export default function Search({ setCurrentWeather }) {
   function handleResponse(response) {
     console.log(response.data);
     const weartherData = {
+      coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       city: city,
