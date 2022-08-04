@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const apiKey = "e3f308dbc1f40462b7213a15fa40687f";
 
@@ -8,7 +8,7 @@ export default function Search({ setCurrentWeather }) {
   const [loading, setLoading] = useState(false);
 
   function handleSubmit(event) {
-    event.preventDefault();
+    event?.preventDefault();
 
     if (loading === false) {
       setLoading(true);
@@ -39,6 +39,10 @@ export default function Search({ setCurrentWeather }) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
+
+  useEffect(() => {
+    handleSubmit();
+  }, []);
 
   return (
     <form onSubmit={handleSubmit}>

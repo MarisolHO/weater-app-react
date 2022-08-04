@@ -35,9 +35,14 @@ export default function Weather() {
         <a
           href="https://github.com/MarisolHO/weather-app-react"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Open-source on GitHub
         </a>{" "}
+        and{" "}
+        <a href="" target="_blank" rel="noopener noreferrer">
+          hosted on Netlify
+        </a>
       </p>
     </div>
   );
